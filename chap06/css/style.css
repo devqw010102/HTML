@@ -1,0 +1,6 @@
+/* 외부 스타일 시트 작성하기 */
+    h1 {
+      /* padding: 10px; */
+      background-color: gray;
+      color: blue;
+    }
