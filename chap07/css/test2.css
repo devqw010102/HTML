@@ -1,0 +1,11 @@
+#headline {
+    text-align: left;
+}
+
+.listStudy {
+    list-style-position: inside;
+}
+
+.company {
+    font-weight: bolder;
+}
