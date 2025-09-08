@@ -1,0 +1,32 @@
+body {
+    padding : 30px;
+}
+
+
+#headline {
+    text-align: center;
+}
+
+#subTitle {
+    text-align: center;
+}
+
+.intro, .study, .career, .techStack {
+    font-size: 24px;
+    color : rgb(61, 102, 236);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.pBox {
+    display : inline-block; 
+    background-color: rgb(106, 158, 236);
+    border-radius: 10px;
+    padding : 10px;
+    margin : 5px;
+}
