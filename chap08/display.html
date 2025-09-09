@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS display 속성</title>
+  <style>
+    /* Do it! li 요소를 가로로 나란히 배치하기 */
+    nav > ul {
+      list-style:none;      
+    }
+
+    nav ul li {
+      width : 100px;
+      height : 40px;
+      line-height: 40px;
+      text-align: center;
+      margin : 10px;
+      border : 1px solid #222;
+      display : inline-block;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+   <nav>
+     <ul>
+      <li><a href="#">메뉴 1</a></li>
+      <li><a href="#">메뉴 2</a></li>
+      <li><a href="#">메뉴 3</a></li>
+      <li><a href="#">메뉴 4</a></li>
+     </ul>
+   </nav>
+</body>
+</html>

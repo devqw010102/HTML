@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            border : 1px solid black;   
+        /*
+            top : 10px;
+            margin : 5px;
+        */
+        }
+        
+        .absolute {
+            position : absolute;
+        }
+
+        .static {  
+            position : static;
+        }
+
+        .relative {
+            position : relative;
+            top : 200px;
+            left : 30px;
+        }
+
+        .divAbsolute {
+            position : absolute;
+            top : 100px;
+            left : 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "absolute">absolute 1</div>
+    <div class = "absolute">absolute 2</div>
+
+    <div class = "relative">relative 1</div>
+    <div class = "relative">relative 2</div>
+
+    <div class = "static">static 1</div>
+    <div class = "static">static 2</div>
+
+    <div class = "divAbsolute">absolute 1
+        <div class = "divAbsolute">absolute 2</div>
+    </div>
+    
+    
+
+
+</body>
+</html>
