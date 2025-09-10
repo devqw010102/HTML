@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border : 1px solid gray;   
+            width : 700px;
+            height : 80%;
+            margin : 10px auto;
+            padding : 15px;
+            font-family: cursive;
+            float : left;
+            margin-right : 15px;
+        }
+
+        header {
+            border : 1px solid gray;  
+            width : 100%;
+            height : 200px;
+            margin : 10px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .headline {
+            display: inline-block;
+        }
+
+        .content {
+            border : 1px solid gray;  
+            width : 60%;
+            padding : 15px;
+            float : left;
+            
+        }
+
+        .sidebar {
+            border : 1px solid gray;  
+            width : 25%;
+            float : right;
+            padding : 15px;
+        }
+
+        .footer {
+            border : 1px solid gray;
+            width : 100%;
+            margin-top : 15px;
+            float : left;  
+
+            padding-top : 20px;
+            padding-bottom: 20px;
+        }
+
+        .rightContent {
+            border : 1px solid gray;  
+            width : 60%;
+            padding : 15px;
+            float : right;
+            
+        }
+
+        .rightSide {
+            border : 1px solid gray;  
+            width : 25%;
+            float : left;
+            padding : 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <header>
+            <h1 class = "headline">2-Column Layout</h1>
+        </header>
+
+        <div class = "content">
+            <h2>Content</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, adipisci commodi illo libero quia et itaque delectus, repudiandae reiciendis natus, aut veniam voluptates autem consequatur quam provident ipsam exercitationem excepturi!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, adipisci commodi illo libero quia et itaque delectus, repudiandae reiciendis natus, aut veniam voluptates autem consequatur quam provident ipsam exercitationem excepturi!</p>
+        </div>
+
+        <div class = "sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+            </ul>
+        </div>
+
+        <div class = "footer">
+            <p>Copyright</p>
+        </div>
+
+    </div>
+
+        <div class = "wrap">
+        <header>
+            <h1 class = "headline">2-Column Layout</h1>
+        </header>
+
+
+        <div class = "rightSide">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+            </ul>
+        </div>
+        
+        <div class = "rightContent">
+            <h2>Content</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, adipisci commodi illo libero quia et itaque delectus, repudiandae reiciendis natus, aut veniam voluptates autem consequatur quam provident ipsam exercitationem excepturi!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, adipisci commodi illo libero quia et itaque delectus, repudiandae reiciendis natus, aut veniam voluptates autem consequatur quam provident ipsam exercitationem excepturi!</p>
+        </div>
+
+
+        <div class = "footer">
+            <p>Copyright</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
