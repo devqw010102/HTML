@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black; /* 배경색 */
+      margin: 0;
+    }
+    .container {      
+      width: 600px; 
+      height: 500px; 
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap : 20px;
+      grid-template-areas: 
+        "item1 item1 item2 item2"
+        "item1 item1 item3 item4"
+        "item5 item5 item3 item4"
+      ;
+    }
+    .grid-item {
+      background-color: yellow; /* 아이템 배경색 */
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .item1{grid-area: item1;}
+    .item2{grid-area: item2;}
+    .item3{grid-area: item3;}
+    .item4{grid-area: item4;}
+    .item5{grid-area: item5;}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item3">3</div>
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item5">5</div>
+  </div>
+</body>
+</html>
