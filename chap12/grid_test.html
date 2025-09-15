@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width : 600px;
+            border : 2px solid #222;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap : 20px 30px;
+        }
+
+        .items{
+            padding:10px;
+            font-size: 20px;        
+            text-align: center;
+        }   
+        .items:nth-child(odd){
+            background-color:#d6faff;
+        }
+        .items:nth-child(even){
+            background-color:#00b7ff;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "items">1</div>
+        <div class = "items">2</div>
+        <div class = "items">3</div>
+        <div class = "items">4</div>
+        <div class = "items">5</div>
+        <div class = "items">6</div>
+    </div>
+
+</body>
+</html>
