@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .container {
+            width : 450px;
+            height : 600px;
+            border : 1px dotted gray;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+            gap : 5px;
+        }
+
+        .container > div {
+            border-radius: 10px;
+            background-color: #aaa;
+            padding : 10px;
+            margin : 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "card"><p onclick="alert('Chart')">Chart</p></div>
+        <div class = "card"><p onclick="alert('Stats')">Stats</p></div>
+        <div class = "card"><p onclick="alert('Users')">Users</p></div>
+        <div class = "card"><p onclick="alert('Revenue')">Revenue</p></div>
+    </div>
+</body>
+</html>
