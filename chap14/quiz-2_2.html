@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation</title>
+	<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 450px;
+      padding: 10px;
+      border: 1px solid #222;
+    }
+    .box{
+      width: 50px;
+      height: 50px;
+      background-color: #d7f4ff; 
+      animation : changeColor_transform 3s infinite alternate;
+    }
+
+    @keyframes changeColor_transform {
+      0% {
+        transform: translateX(0);
+        background-color: #ffe867;
+      }
+      50% {
+        background-color: #ff5e62;
+      }
+      100% {
+        transform: translateX(400px);
+        background-color: #17bdff;
+      }
+    }
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
