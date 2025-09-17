@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #innerCss {
+            color : green;
+        }
+
+        button {
+            margin-bottom : 10px;
+        }
+    </style>
+
+    <link rel = "stylesheet" href="css/ex1.css">
+</head>
+<body>
+    <p style = "color:red">안녕하세요.</p>                        <!-- 인라인 -->
+    <p id = "innerCss">hi</p>                                       <!-- 내부 -->
+    <p id = "outerCss">Hello</p>                                    <!-- 외부 -->
+
+    <button onclick="alert('클릭')">인라인 스크립트</button>        <!-- 인라인 -->
+    <br>
+    <button id = "innerButton">내부 스크립트</button>               <!-- 내부 -->
+    <br>
+    <button id = "outerButton">외부 스크립트</button>               <!-- 외부 -->
+
+    <script>
+        let innerButton = document.querySelector('#innerButton');   // 내부
+        innerButton.onclick = function() {
+            alert('내부 스크립트');
+        }
+
+    </script>
+    <script src = "js/ex1.js"></script>                             <!-- 외부 -->
+</body>
+</html>
