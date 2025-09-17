@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin : 10px;
+            padding : 10px;
+            width : 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id = "btn">클릭</button>
+    <script>
+        // JS_알럿_컨펌_프롬프트_변수상수_자료형.pdf
+        // Q7 ~ Q10
+
+        // Q7) 버튼 클릭시 alert 띄우기
+        document.getElementById('btn').onclick=function() {
+            alert('clicked');
+        }
+
+        // Q8) O X Quiz
+        /* A8)
+            A8 - a) Boolean('0') = false ?  : X(true)
+            A8 - b) Boolean(0) = false ? : O(false)
+            A8 - c) typeof('123') = string ? : O 
+            A8 - d) typeof(null) = "null" ? : X(object)
+        */
+        console.log(Boolean('0'));
+        console.log(Boolean(0));
+        console.log(typeof('123'));
+        console.log(typeof(null));
+
+        // Q9) const 값 변경시 출력 / 오류 상황 서술
+        /*
+            const user = {name : 'Kim', score : 90};
+            user.score = 95;
+            alert(user.score);
+            user = {name : 'Lee', score : 80};
+        */
+        // A9) const(상수) 값 변경 불가
+
+        // Q10) 아래 코드 순서로 작동시 alert 출력값?
+        const a = prompt('값?');
+        const ok = confirm('Y/N');
+        alert(typeof(a) + ' / ' + typeof(ok));
+        // A10) A(string / boolean) or D(object / boolean)
+    </script>
+</body>
+</html>
