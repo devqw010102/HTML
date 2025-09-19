@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin : 0;
+        }
+
+        .example1 {
+            background-color: #111827;
+            padding : 20px;
+            border-radius: 10px;
+            width : 310px;
+            height : 800px;
+        }
+
+        label {
+            color : #60a5fa;
+            border : 1px solid #1f2937;
+            border-radius: 999px;
+            padding : 3px 10px;
+            font-weight:100;
+        }
+
+        h1 { color : white; }
+
+        p { color : #94a3b8; }
+
+        .container {
+            border : 1px dashed skyblue;
+            border-radius: 10px;
+            padding : 20px;
+            
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            grid-template-rows: repeat(3, 60px);
+            grid-template-areas: 
+                "header header header"
+                "main main aside"
+                "footer footer footer"
+            ;
+
+            gap : 10px;
+        }
+
+        .container > header, main, aside, footer {
+            /* background-color: #60a5fa; */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            /* font-size: 24px; */
+        }
+
+        header {
+            background-color: #74b9ff;
+            grid-area: header;
+            height : 180px;
+            /* display: flex;
+            min-height : 180px; */
+        }
+
+        main {
+            background-color: #55efc4;
+            grid-area: main;
+        }
+
+        aside {
+            background-color: #ffeaa7;
+            grid-area: aside;
+        }
+
+        footer {
+            background-color: #fab1a0;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "example1">
+        <label>Example 2</label>
+        <h1>3열 레이아웃 (헤더 / 메인 / 사이드 / 푸터)</h1>
+        <p>grid-template-areas 로 의미 기반 배치</p>
+
+        <div class = "container">
+            <header>헤더</header>
+            <main>메인</main>
+            <aside>사이드</aside>
+            <footer>푸터</footer>
+        </div>
+    </div>
+</body>
+</html>
