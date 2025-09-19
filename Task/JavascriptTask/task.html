@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JS_알럿_컨펌_프롬프트_변수상수_자료형.pdf
+        // Q1 ~ Q6
+
+        // Q1) Alert 값 반환?
+        alert("Q1");
+        // A1) X
+
+        // Q2) confirm 의 반환값은?
+        let confirmReturn = confirm("Q2");
+        console.log(`confirm Return = ${confirmReturn}`);
+        // A2) B(boolean)
+
+        // Q3) prompt 에서 취소의 반환값은?
+        let promptReturn = prompt("Q3");
+        console.log(`prompt Return = ${promptReturn}`);
+        // A3) null
+
+        // Q4) Const 선언 후 값 변환시 오류가 난다.
+        const constTest = 3.14;
+        // constTest = 3.1415;
+        // A4) O
+
+        // Q5) Number('42px') 의 결과는?
+        let numberParse = Number('42px');
+        console.log(`Number('42px') result = ${numberParse}`);
+        // A5) NaN(Not a number)
+
+        // Q6) const v = prompt('숫자'); 입력받은 v를 실수(number)로 바꾸는 법은?
+        const v = prompt("Q6");
+        console.log(typeof(Number(v)));
+        // A6) B(Number)
+    </script>
+</body>
+</html>
