@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+      /*
+        1. 조건 하나에 참에 대한 결과만 있는 경우
+        if(조건) {
+          조건 결과값이 true일 때 실행할 명령
+        }
+
+        2. 조건 하나에 참에 대한 결과와 거짓에 대한 결과가 있는 경우
+        if(조건) {
+          조건 true일 때 실행할 명령
+        } else {
+          조건 false일 때 실행할 명령 
+        }
+
+        3. 조건 여러개에 여러 조건에 대한 각각의 참과 거짓에 대한 겨로가가 있는 경우
+        if(조건1) {
+          조건1 true 일 때 실행할 명령
+        } else if(조건2) {
+          조건2 true 일 때 실행할 명령 
+        } else if(조건3) {
+          조건3 true 일 때 실행할 명령 
+        } else {
+          조건 모두 false 일 때 실행할 명령 
+        }
+
+        4. 조건1과 조건2 모두 참일 때
+        if(조건1 && 조건2) {
+          조건 모두 true 일 때 실행할 명령
+        } else {
+          조건 false 일 때 실행할 명령 
+        }
+
+        5. 조건1, 조건2 중 하나라도 참일 때
+        if(조건1 || 조건2) {
+          조건1, 조건2 중 하나라도 true 일 때 실행할 명령
+        } else {
+          조건 모두 false 일 때 실행할 명령 
+        }
+
+      */
+
+      // Do it! 사용자가 입력한 숫자가 3의 배수인지 판별하기
+
+      let userNumber = parseInt(prompt("Number"));
+
+      if(userNumber % 3 === 0) {
+        alert('3의 배수');
+      } else {
+        alert('3의 배수 아님');
+      }
+
+      userNumber % 3 === 0 ? console.log('O') : console.log('X');
+    </script>
+</body>
+</html>

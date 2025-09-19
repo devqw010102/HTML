@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>세션 선택 - switch문</title>
+	<link rel="stylesheet" href="css/switch.css">
+	<style>
+		p {
+			background-color: red;
+		}
+
+		.marketing {
+			color : blue;
+		}
+	</style>
+</head>
+<body>	
+	<script>
+		// Do it! switch문으로 조건 체크하기
+		let session = prompt("관심 세션을 선택해 주세요. 1 : 마케팅, 2 : 개발, 3 ; 디자인");
+
+		switch(session) {
+			case "1" : document.write("<p class = 'marketing'>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.");
+				break;
+			case "2" : document.write("<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.");
+				break;
+			case "3" : document.write("<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.");
+				break;
+			default : alert("잘못 입력했습니다.");
+		}
+
+		/*
+			"switch 에서 if 로는 자유로운 변환 가능"
+			위 명제의 역은 성립하지 않는다.
+		*/
+
+		// if(session == "1") 
+		// 	document.write("<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.");
+		// else if(session == "2") 
+		// 	document.write("<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.");
+		// else if(session == "3")
+		// 	document.write("<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.");
+		// else
+		// 	document.write("<p>잘못 입력했습니다.</p>");
+				
+		
+	</script>
+</body>
+</html>
