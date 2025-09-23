@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>함수</title>
+	<style>
+    body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		font-size: 1.2em;
+    }
+	</style>
+</head>
+<body>
+
+	<button onclick="addNumber(2, 3)">addNumber call button</button>
+	<script>		
+		// Do it! 매개변수를 사용한 함수 선언하기 및 호출하기
+		function addNumber(a, b) {
+			let sum = a + b;
+			return document.write(sum);
+		}
+		// let result = addNumber(2, 3);
+		// document.write(result);
+	</script>	
+</body>
+</html>
