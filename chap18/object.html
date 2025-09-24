@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 선언
+        let book = {
+            // 객체 안의 변수 = property
+            // book 객체 안의 title, pages property
+            title : "자바스크립트",
+            pages : 500,
+            // 객체 안의 함수 = method
+            // book 객체 안의 info method
+            info : function() {
+                document.write("책 제목 : " + this.title + "<br>");
+                document.write(`페이지 수 : ${this.pages} <br>`);
+            }
+        };
+
+        // book 객체에 있는 property, method 접근은 . 으로 한다
+        book.pages = 550;
+        book.info();
+
+        /*
+            자바스크립트 식별할 수 있는 2가지 방법
+            1. 키워드   
+                ex) let, function...etc
+            2. 괄호     
+                ex) arr = [10, 20], function add(){}, let c = {}...etc
+        */
+    </script>
+</body>
+</html>
