@@ -8,7 +8,7 @@
 
 // Q3
 // console.log("Q3");
-// let number = parseInt(prompt("Q3)Number"));
+// let number = parseInt(prompt("Number"));
 // if(number % 2 == 0) 
 //     console.log("짝수");
 // else
