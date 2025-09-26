@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "hi" class = "ptag">안녕하세요</p>
+    <p id = "name" class = "ptag">홍길동입니다.</p>
+    <p id = "age" class = "ptag">나이는 30세.</p>
+
+    <script>
+        let hi = document.getElementById("hi");
+        let ptag = document.getElementsByClassName("ptag");
+        let p = document.getElementsByTagName("p");
+
+        console.log(hi);
+        console.log(ptag);
+        console.log(p);
+
+        /*
+            p {} == document.queryScelector("p"){}
+            #p {} == document.queryScelector("#p"){}
+            .p {} == document.queryScelector(".p"){}
+            p a {} == document.queryScelector("p a"){}
+            p > a {} == document.queryScelector("p > a"){}
+            p ~ a {} == document.queryScelector("p ~ a"){}
+            p > a:hover{} == document.queryScelector("p > a:hover"){}
+            p > a:[href="http://www.naver.com"] {} 
+                == 
+            document.queryScelector("p a:[href="http://www.naver.com"]"){}
+
+            p {} == document.queryScelectorAll("p"){}
+            #p {} == document.queryScelectorAll("#p"){}
+            .p {} == document.queryScelectorAll(".p"){}
+            p a {} == document.queryScelectorAll("p a"){}
+            p > a {} == document.queryScelectorAll("p > a"){}
+            p ~ a {} == document.queryScelectorAll("p ~ a"){}
+            p > a:hover{} == document.queryScelectorAll("p > a:hover"){}
+            p > a:[href="http://www.naver.com"] {} 
+                == 
+            document.queryScelectorAll("p a:[href="http://www.naver.com"]"){}
+            
+            queryScelector = 변수에 저장
+            queryScelectorAll = 배열에 저장
+
+        */
+
+    </script>
+</body>
+</html>
