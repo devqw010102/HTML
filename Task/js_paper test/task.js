@@ -22,9 +22,14 @@
 
 // Q5
 // console.log("Q5");
-// let x = prompt("X");
-// let y = prompt("Y");
-// console.log(multiply(x, y));
+// let x = document.querySelector("#num1");
+// let y = document.querySelector("#num2");
+// let multi = document.querySelector("#multi");
+// let result = document.querySelector("#result");
+
+// multi.addEventListener('click', function() {
+//     result.textContent = multiply(x.value, y.value);
+// });
 
 // function multiply(x, y) {
 //     return x * y;
@@ -48,10 +53,8 @@
 
 // Q9
 // console.log("Q9");
-// let msg = document.querySelector("#msg");
-// msg.textContent = "Hi";
+// document.querySelector("#msg").textContent = "Hi";
 
 // Q10
 // console.log("Q10");
-// let btn = document.querySelector("#btn");
-// btn.addEventListener('click', () => console.log('버튼이 클릭되었습니다.'));
+// document.querySelector("#btn").addEventListener('click', () => console.log('버튼이 클릭되었습니다.'))
