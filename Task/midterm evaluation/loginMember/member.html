@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border : 1px solid black;
+        }
+
+        table {
+            width : 600px;
+        }
+
+        .pwd {
+            width : 100%;
+            box-sizing: border-box;
+        }
+
+        .longInput {
+            width : 80%;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>회원등록</h1>
+
+    <table>
+        <tr>
+            <th>*이름</th>
+            <td><input type = "text"></td>
+        </tr>
+        <tr>
+            <th>*사진</th>
+            <td><input type = "file"></td>
+        </tr>
+        <tr>
+            <th>*아이디</th>
+            <td><input type = "text" required placeholder="아이디는 8글자 이상입니다."></td>
+        </tr>
+        <tr>
+            <th>*비밀번호</th>
+            <td><input type = "password" required placeholder="대소문자와 숫자, 특수문자를 적어도 하나씩 사용해야 합니다." class ="pwd"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호 확인</th>
+            <td><input type = "password" required class = "longInput"></td>
+        </tr>
+        <tr>
+            <th>이메일</th>
+            <td><input type = "email"  class = "longInput" placeholder="@를 포함한 주소를 입력하세요."></td>
+        </tr>
+        <tr>
+            <th>*생년월일</th>
+            <td><input type = "date"></td>
+        </tr>
+        <tr>
+            <th>*성별</th>
+            <td><input type = "radio" name = "mail">남자 <input type = "radio" name = "mail">여자</td>
+        </tr>
+        <tr>
+            <th>*연락처1</th>
+            <td><input type = "tel"></td>
+        </tr>
+        <tr>
+            <th>*주소</th>
+            <td>
+                우편번호 : <input type = "text"><br>
+                도로명 주소 : <input type = "text"><br>
+                상세주소 : <input type = "text">
+            </td>
+        </tr>
+        <tr>
+            <th>가입경로</th>
+            <td>
+                <select name = "register">
+                    <option>지인</option>
+                    <option>인터넷</option>
+                    <option>잡지</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>취미</th>
+            <td>
+                <select name = "hobby" size = "3">
+                    <option>농구</option>
+                    <option>배구</option>
+                    <option>축구</option>
+                    <option>야구</option>
+                    <option>테니스</option>
+                    <option>골프</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>관심 분야</th>
+            <td>
+                <input type = "checkbox"> HTML
+                <input type = "checkbox"> CSS
+                <input type = "checkbox"> Javascript
+            </td>
+        </tr>
+        <tr>
+            <th>이메일 수신여부</th>
+            <td>
+                <input type = "radio" name = "email">예
+                <input type = "radio" name = "email">아니요
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button>전송</button>
+                <button>취소</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

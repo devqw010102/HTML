@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textBold {
+            font-weight: bold;
+        }
+
+        .headline {
+            font-size: 1.4em;
+            margin : 5px;
+        }
+
+        input {
+            width : 400px;
+            line-height: 2.5rem;
+            border : 2px solid black;
+            border-radius: 5px;
+        }
+
+        #btn {
+            background-color: #555;
+            color : white;
+            font-size: 1.1em;
+        }
+        
+        .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #eee;
+            padding : 10px 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "container">
+            <p class = "headline">신규가입을 환영해요!🙌</p>
+            <p class = "headline">다양한 <span class = "textBold">모임을 위프와 함께</span>해요!</p>
+            <br>
+            <form id = "form">
+                <input type = "text" id = "id"><br>
+                <p><label  id = "idmsg">이름</label></p>
+                <input type = "email" id = "email"><br>
+                <p id = "emailmsg">이메일</p>
+                <input type = "password" id = "pwd"><br>
+                <p id = "pwdmsg">비밀번호</p>
+                <input type = "password" id = "pwdCheck"><br>
+                <p id = "pwdCheckmsg">비밀번호 확인</p>
+                <input type = "submit" value = "Sign up" id = "btn">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let id = document.querySelector("#id");
+        let email = document.querySelector("#email");
+        let password = document.querySelector("#pwd");
+        let passwordCheck = document.querySelector("#pwdCheck");
+
+        let btn = document.querySelector("#btn");
+
+        let idMsg = document.querySelector("#idMsg");
+        let emailmsg = document.querySelector("#emailmsg");
+        let pwdmsg = document.querySelector("#pwdmsg");
+        let pwdCheckmsg = document.querySelector("#pwdCheckmsg");
+
+        let form = document.querySelector("form");
+
+        let regId = /^[ㄱ-ㅎ가-힣]{2,4}$/
+        let regEmail = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+        let regPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,12}/;
+
+        id.addEventListener('blur', validateName);
+        email.addEventListener('blur', validateEmail);
+        password.addEventListener('blur', validatePassword);
+        passwordCheck.addEventListener('blur', validatePasswordCheck);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            if(validateName() && validateEmail() && validatePassword() && validatePasswordCheck()) {
+                form.submit();
+            }
+        })
+
+        function validateName() {
+            if(regId.test(id.value)) {
+                idmsg.textContent = "사용가능";
+                idmsg.style.color = "Green";
+                return true;
+            }
+            else {
+                idmsg.textContent = "2 ~ 4자리 한글을 입력해주세요";
+                idmsg.style.color = "red";
+                return false;
+            }
+        }
+
+        function validateEmail() {
+            if(regEmail.test(email.value)) {
+                emailmsg.textContent = "사용가능";
+                emailmsg.style.color = "Green";
+                return true;
+            }
+            else {
+                emailmsg.textContent = "Email 형식이 올바르지 않습니다.";
+                emailmsg.style.color = "red";
+                return false;
+            }
+        }
+
+        function validatePassword() {
+            if(regPassword.test(password.value)) {
+                pwdmsg.textContent = "사용가능";
+                pwdmsg.style.color = "Green";
+                return true;
+            }
+            else {
+                pwdmsg.textContent = "4 ~ 12자 영문 대/소문자 혹은 숫자를 입력해주세요.";
+                pwdmsg.style.color = "red";
+                return false;
+            }
+        }
+
+        function validatePasswordCheck() {
+            if(password.value == passwordCheck.value) {
+                pwdCheckmsg.textContent = "사용가능";
+                pwdCheckmsg.style.color = "Green";
+                return true;
+            }
+            else {
+                pwdCheckmsg.textContent = "Password가 다릅니다.";
+                pwdCheckmsg.style.color = "red";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
