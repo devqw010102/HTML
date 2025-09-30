@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1. jQuery 다운로드 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- 2. jQuery 다운로드X, 링크로 연결 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        /*
+            $(선택자).메소드() => 기본형
+        */
+        $(document).ready(function() {
+            // 기본 선택자(전체, 태그, 아이디, 클래스 선택자)
+            // 전체 선택자
+            $('*')
+            // 태그 선택자
+            // h1 글자색을 빨간색으로
+            $('h1').css('color', 'red');
+            // 아이디 선택자
+            // 아이디가 hi인 태그 배경색은 파란색, 글자색은 흰색으로
+            $('#hi').css({'background-color' : 'blue', 'color' : 'white'});
+            $('#name')
+            $('#age')
+            // 클래스 선택자
+            $('.self')
+        });
+    </script>
+</head>
+<body>
+    <h1>자기 소개</h1>
+    <p id = "hi" class = "self">안녕하세요.</p>
+    <p id = "name" class = "self">홍길동입니다.</p>
+    <p id = "age" class = "self">나이는 30세 입니다.</p>
+</body>
+</html>

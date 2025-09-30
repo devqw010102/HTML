@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1. jQuery 다운로드 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- 2. jQuery 다운로드X, 링크로 연결 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    
+    <script>
+        $(document).ready(function() {
+            // div 태그의 자식태그를 선택
+            $('div > p').css('color', 'red');
+            // href 속성을 선택하고 배경색을 회색으로
+            $('[href]').css('backgroundColor', 'gray');
+            // href 속성 naver 단어 포함된 것 노란색으로
+            $('[href *= "naver"]').css('color', 'yellow');
+            
+            // a 태그 텍스트 가져오기   == innerHTML, innerText, textContent
+            $('a').html();
+            // a 태그 텍스트 수정하기
+            $('a').html("네이버");
+            // 아이디 id인 것 value 가져오기    == .value
+            $('#id').val();
+            // 아이디 id인 것 value 수정하기
+            $('#id').val("asdf");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>안녕하세요1.</p>
+        <a href = "http://naver.com">네이버로 이동</a>
+        <a href = "http://google.com">구글로 이동</a>
+        <img src="images/cat.jpg">
+    </div>
+    <p>안녕하세요2.</p>
+    아이디 : <input type = "text" id = "id">
+</body>
+</html>
