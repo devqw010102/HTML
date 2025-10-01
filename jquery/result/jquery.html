@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery를 html과 연결하는 두 가지 방법중에서 하나만 사용하시면 됩니다. -->
+    <!-- jquery를 다운로드 받아서 html과 연결 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- jquery를 다운로드 받지 않고 링크 주소를 이용해서 html과 연결 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    -->
+    <script>
+
+        $(document).ready(function(){
+            // ul 태그 내의 li 태그를 반복하며 각 li 태그의 텍스트를 출력
+            $("ul li").each(function(index, item){
+                console.log("인덱스 : "+index+", 텍스트 : "+$(item).html());
+            })
+            // 배열 선언
+            let fruits = ["사과","바나나","체리","딸기"];
+            $.each(fruits,function(index, item){
+                console.log("인덱스 : "+index+", 텍스트 : "+item);
+            })
+            // 선택 확인(id="checkSelection")버튼을 클릭(click)하면,
+            $("#checkSelection").click(function(){
+                
+                $(".radio").each(function(index, item){
+                    let selected=$(item).prop("checked") // 라디오 선택항목 중에서 선택한것만
+                    let value = $(item).val();
+                    // 값을 출력해라.
+                    console.log("라디오버튼 : "+(index + 1)+" (값 : "+value+")"+selected);
+                })
+            })
+            // 상태 확인(id="checkStatus")버튼을 클릭(click)하면,
+            $("#checkStatus").click(function(){
+                $(".checkbox").each(function(index, item){
+                    let selected=$(item).prop("checked")// 체크박스 선택항목 중에서 선택한것만
+                    let value = $(item).val();
+                    // 값을 출력해라
+                    console.log("라디오버튼 : "+(index + 1)+" (값 : "+value+")"+selected);
+                })
+
+            })
+            $(".box").each(function(index,item){
+                let colors = ["red","green","blue","orange"]
+                $(item).css({
+                    "background-color":"lightblue",// 배경색은 하늘색(lightblue)
+                    "color":colors[index],// 글자색은 흰색(white)
+                    "font-weight":"bold"// 글자 굵기는 굵게(bold)
+                })
+            })
+            // 객체 선언
+            let person = {
+                            name:"홍길동",
+                            age:30,
+                            occupation:"개발자"
+            };
+            $.each(person,function(key, value){
+                $("#output").append(key + ":" + value + "<br>")
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+    </ul>
+    <!-- 객체 정보 출력 -->
+    <div id="output">
+        
+    </div>
+    <!-- 라디오 -->
+    <p>
+        <label><input type="radio" class="radio" name="gender" value="male">남성</label>
+        <label><input type="radio" class="radio" name="gender" value="female">여성</label>
+        <label><input type="radio" class="radio" name="gender" value="other">기타</label>
+        <button id="checkSelection">선택 확인</button>
+    </p>
+    <!-- 체크박스 -->
+    <p>
+        <label><input type="checkbox" class="checkbox">체크박스 1</label>
+        <label><input type="checkbox" class="checkbox">체크박스 2</label>
+        <label><input type="checkbox" class="checkbox">체크박스 3</label>
+        <button id="checkStatus">상태 확인</button>
+    </p>
+    <div class="box">상자 1</div>
+    <div class="box">상자 2</div>
+    <div class="box">상자 3</div>
+    <div class="box">상자 4</div>
+</body>
+</html>
+

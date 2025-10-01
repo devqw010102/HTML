@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 등록 버튼을 클릭하면
+            $('#btnRegister').click(function() {
+                let newComment = $('#commentInput').val();
+                // 첫 번째 댓글 다음으로 댓글이 달려라.
+                $('#comments').append('<li>'+ newComment +'</li>')
+            });
+        });
+    </script>
+</head>
+<body>  
+    <!-- 댓글 추가하기 -->
+     <input type = "text" id = "commentInput" placeholder="댓글을 작성하세요.">
+    <button id = "btnRegister">댓글 등록</button>
+    <ul id = "comments">
+        <li>첫 번째 댓글</li>
+    </ul>
+</body>
+</html>

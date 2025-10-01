@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // append vs appendTo
+            $("#box1").append("<span>B</span>")
+            $("<span>C</span>").appendTo("#box1")
+            // prepend vs prependTo
+            $("#box2").prepend("<span>B</span>")
+            $("<span>C</span>").prependTo("#box2")
+            // after vs insertAfter
+            $("#box3").after("<span>B</span>")
+            $("<span>C</span>").insertAfter("#box3")
+            // before vs insertBefore
+            $("#box4").before("<span>B</span>")
+            $("<span>C</span>").insertBefore("#box4")
+
+            // clone
+            $("p").clone().appendTo("#hi");
+        })
+
+    </script>
+</head>
+<body>
+    <h1>append vs appendTo</h1>
+    <div id="box1">A</div>
+    <h1>prepend vs prependTo</h1>
+    <div id="box2">A</div>
+    <h1>after vs insertAfter</h1>
+    <div id="box3">A</div>
+    <h1>before vs insertBefore</h1>
+    <div id="box4">A</div>
+
+    <h1 id="hi"></h1>
+    <p>안녕하세요.</p>
+</body>
+</html>

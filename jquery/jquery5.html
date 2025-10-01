@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            background-color: yellow;
+        }
+        button {
+            margin : 5px;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 추가 버튼 클릭하면, p 태그에 class = 'a' 추가
+            $('#classAdd').click(function() {
+                $('p').addClass('a');
+            });
+            // 삭제 버튼 클릭하면, p 태그 class 삭제
+            $('#classRemove').click(function() {
+                $('p').removeClass('a');
+            });
+
+            $('#classToggle').click(function() {
+                $('p').toggleClass('a');
+            });
+
+            /*
+            $('#changeImg').click(function() {
+                $('img').attr(
+                    {'src' : 'images/cat.png',
+                     'width' : '100px', 
+                     'height' : '100px'
+                    })    
+            })
+            
+            $('#changeImg').click(function() {
+                $('img').attr('src', function() {
+                    alert('이미지가 변경됨.');
+                    return 'images/cat.png';
+                })
+                .attr('width', '100px')
+                .attr('height', '100px');
+            })
+            */
+            $('#changeImg').click(function() {
+                $('img').attr('width', '100px')
+                .attr('height', '100px')
+                .attr('src', function() {
+                    alert('이미지가 변경됨.');
+                    return 'images/cat.png';
+                })
+            });
+            // HTML() 버튼 클릭하면
+            $('#btnHtml').click(function() {
+                // div에 태그 추가
+                $('#msg').html('<p><b>동적으로 추가된 문장</b></p>')
+            });
+            // TEXT() 버튼 클릭하면
+            $('#btnText').click(function() {
+                // div에 태그 추가
+                $('#msg').text('<p><b>동적으로 추가된 문장</b></p>')
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>안녕하세요.</p>
+    <button id = "classAdd">클래스 추가</button>
+    <button id = "classRemove">클래스 삭제</button>
+    <button id = "classToggle">클래스 추가 및 삭제</button>
+    <br>
+    <img src ="images/cat.jpg">
+    <br>
+    <button id = "changeImg">이미지 변경하기</button>
+
+    <div id = "msg"></div>
+    <button id = "btnHtml">HTML()</button>
+    <button id = "btnText">TEXT()</button>
+</body>
+</html>

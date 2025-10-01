@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>질문 추가 예제</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .question {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .question input[type="text"] {
+      width: 80%;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>미니 설문지</h2>
+
+  <!-- 질문 템플릿 -->
+  <div class="question" id="questionTemplate">
+    <input type="text" placeholder="질문을 입력하세요">
+    <br>
+    <label><input type="radio" name="opt"> 선택지 1</label>
+    <label><input type="radio" name="opt"> 선택지 2</label>
+  </div>
+
+  <!-- 질문들이 들어갈 영역 -->
+  <div id="questionsArea"></div>
+
+  <!-- 버튼 -->
+  <button id="addQuestion">+ 질문 추가</button>
+
+  <script>
+    $(function(){
+      $("#addQuestion").click(function() {
+        // 템플릿을 복제 (clone) → 새로운 질문 블록으로 append
+        $("#questionsArea").append($("#questionTemplate").clone());
+      });
+    });
+  </script>
+</body>
+</html>

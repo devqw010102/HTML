@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{background-color: yellow;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 클래스 추가 버튼(id가 classAdd)을 클릭하면,
+            $("#classAdd").on("click",function(){
+                // p태그에 class="a" 추가(<p class="a">안녕하세요.</p>) - addClass()
+                $("p").addClass("a")
+            })
+            // 클래스 삭제 버튼(id가 classRemove)을 클릭하면,
+            $("#classRemove").on("click",function(){
+                // p태그에 class="a" 삭제(<p>안녕하세요.</p>) - removeClass()
+                $("p").removeClass("a")
+            })
+            // 하나의 버튼으로 클랙스를 추가하고 클래스 삭제(id가 classToggle)을 클릭하면,
+            $("#classToggle").on("click",function(){
+                $("p").toggleClass("a")
+            })
+
+            // 이미지 변경하기(changeImg) 클릭하면,
+            $("#changeImg").on("click",function(){
+                // image/bear.jpg -> image/무궁화.jpg
+                // src="image/bear.jpg" -> src="image/무궁화.jpg"
+                // width = 100px, height = 100px
+            $("img").attr("src", function(){
+            alert("이미지가 변경되었습니다..");
+                return "/images/cat.png";  // 반드시 새 값 리턴
+            })
+            .attr("width","100px")
+            .attr("height","100px")
+            })
+            // HTML()버튼클릭하면
+            $("#htmlbtn").click(function(){
+                // id가 msg인 div에 태그 추가
+                $("#msg").html("<p><b>동적으로 추가된 문장</b></p>")
+            })
+            // TEXT()버튼클릭하면
+            $("#textbtn").click(function(){
+                // id가 msg인 div에 태그 추가
+                $("#msg").text("<p><b>동적으로 추가된 문장</b></p>")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>안녕하세요.</p>
+    <button id="classAdd">클래스 추가</button>
+    <button id="classRemove">클래스 삭제</button>
+    <button id="classToggle">하나의 버튼으로 클랙스를 추가하고 클래스 삭제</button>
+    <br>
+    <img src="/images/cat.jpg"><br>
+    <button id="changeImg">이미지 변경하기</button>
+
+    <div id="msg"></div>
+    <button id="htmlbtn">HTML()</button>
+    <button id="textbtn">TEXT()</button>
+
+</body>
+</html>
